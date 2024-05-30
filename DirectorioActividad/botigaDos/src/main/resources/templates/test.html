@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulari de Insercion de productos</title>
+    <link th:href="@{/styles/style_insertarProducto.css}" rel="stylesheet" />
+</head>
+<body>
+    <h1>Insertar productos</h1>
+    <form action="#" th:action="@{/prodname}" th:object="${prodname}" th:method="post">
+        <label for="name">Nombre del producto:</label>
+        <input type="text" id="input_nombre_producto" name="name" required>
+        <label for="name">Descripcion del producto:</label>
+        <input type="text" id="input_descripcion" name="name" required>
+        <label for="name">Unidades:</label>
+        <input type="text" id="input_unidades" name="name" required>
+        <label for="name">Precio:</label>
+        <input type="text" id="input_precio" name="name" required>
+        <label for="name">Nombre del fabricante:</label>
+        <input type="text" id="input_nombre_fabricante" name="name" required>
+        <!-- <label for="name">Subcategoria:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="name">Categoria:</label>
+        <input type="text" id="name" name="name" required> -->
+
+        <button type="submit">Cerca</button>
+    </form>
+    <p><a class="nav-link" th:href="@{/guardarProducto}">Volver a la pagina de inicio</a></p>
+</body>
+</html>
