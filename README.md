@@ -8,7 +8,7 @@ campo.
 Entre las funciones que ofrece el proyecto, podemos realizar una insercion:
 
 - Rellenamos los cammpos de la tabla
-<img src="./imgs/Imagen_01.png"/>
+<img src="imgs/Imagen_01.png"/>
 - Comprobamos su existencia
 
 
