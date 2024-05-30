@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="UTF-8">
+        <title>Catàleg de productes</title>
+        <link th:href="@{/styles/style_catalog.css}" rel="stylesheet" />
+    </head>
+<body>
+    <h1>Catàleg de productes</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Id del producte</th>
+                <th>Nom</th>
+                <th>Descripció</th>
+                <th>Fabricante</th>
+                <th>Price</th>
+                <th>Unidades</th>
+                <th>Fecha Creacion</th>
+                <th>Fecha actualizacion</th>
+            </tr>
+        </thead>
+        <tbody th:each="product : ${products}">
+            <tr>
+                <td th:text="${product.product_id}"></td>
+                <td th:text="${product.name}"></td>
+                <td th:text="${product.descripcion}"></td>
+                <!-- <td th:text="${prduct.subcategory.name}"></td> -->
+                <td th:text="${product.company}"></td>
+                <td th:text="${product.price}"></td>
+                <td th:text="${product.units}"></td>
+                <td th:text="${product.creationDate}"></td>
+                <td th:text="${product.updateDate}"></td>
+                
+            </tr>
+        </tbody>
+    </table>
+    <p><a class="nav-link" th:href="@{/}">Torna a la pàgina d'inici</a></p>
+</body>
+</html>

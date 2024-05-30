@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulari de Insercion de productos</title>
+    <link th:href="@{/styles/style_insertarProducto.css}" rel="stylesheet" />
+</head>
+<body>
+    <h1>Insertar productos</h1>
+    <form action="#" th:action="@{/prepararProducto}" th:object="${product}" th:method="post">
+        <label>Nombre del producto:</label>
+        <input type="text" th:field="*{name}" required>
+        <label>Descripcion:</label>
+        <input type="text" th:field="*{descripcion}" required>
+        <label>Company:</label>
+        <input type="text" th:field="*{company}" required>
+        <label>Precio:</label>
+        <input type="number" th:field="*{price}" step="0.01" required>
+        <label>Unidades:</label>
+        <input type="number" th:field="*{units}" required>
+        <button type="submit">Cerca</button>
+    </form>
+    <!-- <form action="#" th:action="@{/prepararProducto}" th:object="${product}" th:method="post">
+        <label for="txt_nombre">Nombre del producto:</label>
+        <input type="text" id="input_nombre_producto" name="inp_nombre_producto" th:field="*{name}" required>
+        <label for="txt_descripcion">Descripcion del producto:</label>
+        <input type="text" id="input_descripcion" name="inp_descripcion" th:field="*{description}" required>
+        <label for="txt_unidades">Unidades:</label>
+        <input type="text" id="input_unidades" name="inp_unidades" th:field="*{company}" required>
+        <label for="txt_precio">Precio:</label>
+        <input type="text" id="input_precio" name="inp_precio" th:field="*{precio}" required>
+        <label for="txt_nombre_fabricante">Nombre del fabricante:</label>
+        <input type="text" id="input_nombre_fabricante" name="inp_nombre_fabricante" th:field="*{unidades}" required>
+        <label for="name">Subcategoria:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="name">Categoria:</label>
+        <input type="text" id="name" name="name" required> -->
+
+        
+    </form> 
+    <p><a th:href="@{/}">Volver a la pagina de inicio</a></p>
+</body>
+</html>
